@@ -4,13 +4,12 @@ angular.module('GoogleCalendarService', [], function($provide){
 		
 		var $scope = angular.element(document).scope();
 		
-		var defer = $q.defer();
-
 		//the url where our node.js application is located
 		var baseUrl = 'http://localhost:5000';
 
 		return {
 			getEvents: function(){
+				var defer = $q.defer();
 
 				$http.get(baseUrl+'/events').then(function(response){
 					
@@ -31,6 +30,7 @@ angular.module('GoogleCalendarService', [], function($provide){
 				return defer.promise;
 			},
 			addEvent: function(scheduledDate, endDate, contactInfo){
+				var defer = $q.defer();
 
 				var postData = {
 					startdate: scheduledDate,
