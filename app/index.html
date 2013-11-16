@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="gcal-bookingapp">
+  <head>
+    <!-- angularjs -->
+    <!-- don't forget to switch to minified versions for production apps -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.js"></script>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+  </head>
+  <body>
+  
+
+    <nav class="navbar navbar-default" role="navigation">
+      <ul class="nav navbar-nav navbar-left">
+        <a class="navbar-brand" href="#">Booking App Demo</a>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/event/new">Add Reservation</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div ng-view class="view-animate"></div>
+    </div>
+    
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services/GoogleCalendarService.js"></script>
+  </body>
+</html>

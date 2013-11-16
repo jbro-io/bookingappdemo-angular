@@ -1,0 +1,8 @@
+<h1>Upcoming Reservations</h1>
+<div>
+	<input ng-model="search" type="text" placeholder="Search"></input>
+	<div ng-repeat="event in events | filter:search">
+		<a href="#/event/{{event.id}}">{{event.summary}}</a>
+		- {{ event.start.dateTime || event.start.date | date:medium }}
+	</div>
+</div>

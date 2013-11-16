@@ -1,0 +1,5 @@
+<h3>{{event.summary}}</h3>
+<div class="well">
+	When: {{event.start.date || event.start.dateTime | date:'MMM d, y @ h:mm a'}}<br/>
+	Description: {{event.description}}<br/>
+</div>
